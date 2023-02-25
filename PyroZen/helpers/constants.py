@@ -8,9 +8,9 @@
 # t.me/SharingUserbot & t.me/Lunatic0de
 
 class First:
-    ALIVE = "`Still Working On Fire 👑`"
+    ALIVE = "`Still Working On Fire 🦖`"
     REPO = """
-**Hey**, __I am using__ 👑 **PyroZen-Userbot** 👑
+**Hey**, __I am using__ 🦖 **ZOIDs-Userbot** 🦖
 
 ✣ **Userbot Version :** `{}`
 ✣ **Group Support :** [Zen Support Group](t.me/ZennXSupport)
@@ -20,13 +20,13 @@ class First:
 
 
 
-Powered by © @zennihhh"""
+Powered by © @Eror_404_NF"""
     CREATOR = 'I was created by my master <a href="https://github.com/BionXP/PyroZen-Userbot">Man</a> on a rainy day.'
     MSG_ON = """
-🔥 **PyroZen-Userbot Berhasil Di Aktifkan**
+🔥 **ZOIDs-Userbot Berhasil Di Aktifkan**
 ━━
 ➠ **Userbot Version -** `{}`
-➠ **Ketik** `{}zen` **untuk Mengecheck Bot**
+➠ **Ketik** `{}ZOIDs` **untuk Mengecheck Bot**
 ━━
 """
 

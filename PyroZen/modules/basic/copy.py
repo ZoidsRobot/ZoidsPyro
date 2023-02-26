@@ -36,6 +36,6 @@ async def copy_msg(client: Client, message: Message):
 add_command_help(
     "copy",
     [
-        [f"{prefix}copy", "nyolong konten orang"],
+        [".copy", "nyolong konten orang"],
     ],
 )

@@ -15,8 +15,8 @@ from pyrogram import Client, filters
  @Client.on_message(filters.command("copy", cmd) & filters.me)
 
 # Define the copy command
-@app.on_message(filters.command("copy", [".", "/"]))
-async def copy(client, message):
+@Client.on_message(filters.command("copy", cmd) & filters.me)
+async def copy(client, Client, message: Message):
     # Extract the chat ID from the command link
     link_parts = message.text.split("/")
     try:

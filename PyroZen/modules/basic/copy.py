@@ -12,7 +12,7 @@ from PyroZen.modules.help import add_command_help
 
 from pyrogram import Client, filters
 
-app = Client("my_account")
+ @Client.on_message(filters.command("copy", cmd) & filters.me)
 
 # Define the copy command
 @app.on_message(filters.command("copy", [".", "/"]))
@@ -67,9 +67,9 @@ async def copy(client, message):
 
 
 
-add_command_help(
-    "copy",
-    [
-        [".copy", "nyolong konten orang"],
-    ],
-)
+
+
+
+
+
+

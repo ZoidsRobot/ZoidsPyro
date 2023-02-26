@@ -12,7 +12,7 @@ from platform import python_version as y
 BOT_VER = "2.0.0"
 CMD_HANDLER = ["." "," "?" "!"]
 MSG_ON = """
-⚡ **PyroZen Telah Hidup** ⚡
+⚡ **ZOIDs-Userbot Telah Hidup** ⚡
 ┏━━━━━━━━━━━━━━━━━━━┓
 ┠➣**Userbot Version** `{}`
 ┠➣**Python Version** `{}`
@@ -46,6 +46,6 @@ async def main():
 
 
 if __name__ == "__main__":
-    LOGGER("PyroZen").info("PyroZen Telah Hidup")
+    LOGGER("PyroZen").info("ZOIDs-Userbot Telah Hidup")
     install()
     LOOP.run_until_complete(main())

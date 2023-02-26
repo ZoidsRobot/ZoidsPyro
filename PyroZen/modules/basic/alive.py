@@ -46,7 +46,7 @@ async def alive(client: Client, message: Message):
     send = client.send_video if alive_logo.endswith(".mp4") else client.send_photo
     uptime = await get_readable_time((time.time() - StartTime))
     man = (
-        f"**『 [PyroZen-Userbot](https://github.com/BionXP/PyroZen-Userbot) 』**\n\n"
+        f"**『 [ZOIDs-Userbot](https://github.com/xnxx) 』**\n\n"
         f"<b>{alive_text}</b>\n\n"
         f"┏━━━━━━━━━━━━━━━━━━━━━┓\n"
         f"┠➣ <b>Master :</b> {client.me.mention} \n"

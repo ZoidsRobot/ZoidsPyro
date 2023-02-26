@@ -39,9 +39,9 @@ emoji = gvarstatus("ALIVE_EMOJI") or "✮"
 alive_text = gvarstatus("ALIVE_TEKS_CUSTOM") or "✪ 𝙸'𝙼 𝙰𝙻𝙸𝚅𝙴 𝚃𝙾𝙳 ✪"
 
 
-@Client.on_message(filters.command(["zen", "alive"], cmd) & filters.me)
+@Client.on_message(filters.command(["ZOIDs", "alive"], cmd) & filters.me)
 async def alive(client: Client, message: Message):
-    xx = await edit_or_reply(message, "⚡")
+    xx = await edit_or_reply(message, "🤖")
     await asyncio.sleep(2)
     send = client.send_video if alive_logo.endswith(".mp4") else client.send_photo
     uptime = await get_readable_time((time.time() - StartTime))

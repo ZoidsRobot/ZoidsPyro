@@ -43,8 +43,8 @@ async def copy(client, message):
     except Exception as e:
         await message.reply(f"Failed to copy message: {e}")
 
-# Run the client
-app.run()
+
+
 
 
 

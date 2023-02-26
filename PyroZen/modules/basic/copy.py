@@ -12,7 +12,7 @@ from PyroZen.modules.help import add_command_help
 
 from pyrogram import Client, filters
 
- @Client.on_message(filters.command("copy", cmd) & filters.me)
+
 
 # Define the copy command
 @Client.on_message(filters.command("copy", cmd) & filters.me)

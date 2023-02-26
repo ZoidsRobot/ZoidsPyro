@@ -22,7 +22,7 @@ async def copy(client: Client, message: Message):
     try:
         chat_id = int(link_parts[-2])
     except (ValueError, IndexError):
-        await message.reply("Invalid link provided.")
+        await message.reply("Gabisa Ya.")
         return
 
     # Extract the message ID from the link

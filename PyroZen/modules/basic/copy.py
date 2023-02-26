@@ -26,6 +26,7 @@ async def copy(client: Client, message: Message):
         return
 
     # Extract the message ID from the link
+    link_parts = message.text.split("/")
     try:
         message_id = int(link_parts[-1])
     except (ValueError, IndexError):

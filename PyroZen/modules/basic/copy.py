@@ -10,26 +10,60 @@ from PyroZen.helpers.tools import get_arg
 from PyroZen.modules.help import add_command_help
 
 
-@Client.on_message(filters.command("copy", cmd) & filters.me)
-async def copy_msg(client: Client, message: Message):
-    Tm = await message.reply("`Processing...`")
-    link = get_arg(message)
-    if not link:
-        return await Tm.edit(f"<b><code>{message.text}</code> [link_konten_telegram]</b>")
-    if link.startswith(("https", "t.me")):
-        msg_id = int(link.split("/")[-1])
-        if "t.me/c/" in link:
-            chat = int("-100" + str(link.split("/")[-2]))
-        else:
-            chat = str(link.split("/")[-2])
-        try:
-            get = await client.get_messages(chat, msg_id)
-            await get.copy(message.chat.id)
-            await Tm.delete()
-        except Exception as error:
-            await Tm.edit(error)
-    else:
-        await Tm.edit("`Berikan link yang valid.`")
+from pyrogram import Client, filters
+
+app = Client("my_account")
+
+# Define the copy command
+@app.on_message(filters.command("copy", [".", "/"]))
+async def copy(client, message):
+    # Extract the chat ID from the command link
+    link_parts = message.text.split("/")
+    try:
+        chat_id = int(link_parts[-2])
+    except (ValueError, IndexError):
+        await message.reply("Invalid link provided.")
+        return
+
+    # Extract the message ID from the link
+    try:
+        message_id = int(link_parts[-1])
+    except (ValueError, IndexError):
+        await message.reply("Invalid link provided.")
+        return
+
+    # Copy the message to the specified chat
+    try:
+        copied_message = await client.copy_message(
+            chat_id=chat_id,
+            from_chat_id=message.chat.id,
+            message_id=message_id
+        )
+        await message.reply("Message copied successfully.")
+    except Exception as e:
+        await message.reply(f"Failed to copy message: {e}")
+
+# Run the client
+app.run()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

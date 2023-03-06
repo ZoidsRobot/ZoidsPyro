@@ -33,10 +33,10 @@ from .help import add_command_help
 
 modules = CMD_HELP
 alive_logo = (
-    gvarstatus("ALIVE_LOGO") or ""
+    gvarstatus("ALIVE_LOGO") or "https://telegra.ph/file/a665e37651632bc25bcf0.jpg"
 )
 emoji = gvarstatus("ALIVE_EMOJI") or "✮"
-alive_text = gvarstatus("ALIVE_TEKS_CUSTOM") or "✪ 𝙸'𝙼 𝙰𝙻𝙸𝚅𝙴 𝚃𝙾𝙳 ✪"
+alive_text = gvarstatus("ALIVE_TEKS_CUSTOM") or "✪ 𝙸'𝙼 𝙰𝙻𝙸𝚅𝙴 ✪"
 
 @Client.on_message(filters.command(["ZOIDs", "alive"], cmd) & filters.me)
 async def alive(client: Client, message: Message):

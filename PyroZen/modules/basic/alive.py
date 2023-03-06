@@ -70,7 +70,6 @@ async def alive(client: Client, message: Message):
         )
     except BaseException as e:
          print(f"Error Requests: {e}")
-        pass
         return 
     await xx.edit_text(man, disable_web_page_preview=True)
         

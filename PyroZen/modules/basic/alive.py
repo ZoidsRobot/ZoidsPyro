@@ -58,6 +58,7 @@ async def alive(client: Client, message: Message):
         f"┗━━━━━━━━━━━━━━━━━━━━━┛\n\n"
         f"    **『 [𝗦𝘂𝗽𝗽𝗼𝗿𝘁](https://t.me/{GROUP})** | **[𝗖𝗵𝗮𝗻𝗻𝗲𝗹](https://t.me/{CHANNEL})** | **[𝗢𝘄𝗻𝗲𝗿](tg://user?id={client.me.id}) 』**"
     )
+
 try:
         new_message = await send(
             message.chat.id,

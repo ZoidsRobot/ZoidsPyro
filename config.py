@@ -20,8 +20,8 @@ load_dotenv("config.env")
 ALIVE_EMOJI = getenv("ALIVE_EMOJI", "✮")
 ALIVE_LOGO = getenv("ALIVE_LOGO", "https://telegra.ph/file/40a0ecc9b7f5083800118.jpg")
 ALIVE_TEKS_CUSTOM = getenv("ALIVE_TEKS_CUSTOM", "Hey, I am alive.")
-API_HASH = getenv("API_HASH")
-API_ID = int(getenv("API_ID", ""))
+API_HASH = getenv("API_HASH", "a92aed7d74654a563af4b07efbcd88e9")
+API_ID = int(getenv("API_ID", "9774346"))
 BLACKLIST_CHAT = getenv("BLACKLIST_CHAT", None)
 if not BLACKLIST_CHAT:
     BLACKLIST_CHAT = [-1001473548283]
@@ -31,11 +31,11 @@ BOT_VER = "1.1.5@main"
 BRANCH = getenv("BRANCH", "main") #don't change
 CMD_HANDLER = [".", "?", "!", "*", "-"]
 CMD_HNDLR = [".", "?", "!", "*", "-"]
-OWNER_ID = getenv("OWNER_ID", "")
-BOT_TOKEN = getenv("BOT_TOKEN", "")
-OPENAI_API_KEY = getenv("OPENAI_API_KEY", "")
+OWNER_ID = getenv("OWNER_ID", "907544310")
+BOT_TOKEN = getenv("BOT_TOKEN", "6129975129:AAH9HMHm6wJNEAmK6V6xm8Mxu6cr5jxZe18")
+OPENAI_API_KEY = getenv("OPENAI_API_KEY", "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")
 CHANNEL = getenv("CHANNEL", "zennihhh")
-DB_URL = getenv("DATABASE_URL", "")
+DB_URL = getenv("DATABASE_URL", "postgresql://yqwuprvg:hFh5CemjIwwXAeEPPsbTv_ASZlIl6XrC@salt.db.elephantsql.com/yqwuprvg")
 GIT_TOKEN = getenv(
     "GIT_TOKEN",
     jandigantinantierornanges("").decode(
@@ -48,7 +48,7 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 PMPERMIT_PIC = getenv("PMPERMIT_PIC", None)
 PM_AUTO_BAN = strtobool(getenv("PM_AUTO_BAN", "True"))
 REPO_URL = getenv("REPO_URL", "https://github.com/BionXP/PyroZen-Userbot")
-STRING_SESSION1 = getenv("STRING_SESSION1", "")
+STRING_SESSION1 = getenv("STRING_SESSION1", "BQAhIHQAmWUPe-Qq0HjL3YsXOyI-tv5QL5jx3b4d7PYR9HlBYaiWydeV4GziWY5WtL6IJ0ZbCvgcYoMY2rvav-yqryw-RA-2ZFJqNfCdgH4frk4pAHiBpS1jC3lvyk9qbtQTE2D0u_N5CT6N2ZfDazh3bCLJ2bY2VBEOz_Je4u1poluqdgmTQB29PFFhSRQfYkziD3A4a4kEX_kOJc5aU0qS1u8hSQEr8yfYRXKyBSrn3QWlYquSm2f6axOjsMJnk745eQ6fNipPgAMgIGsO7vaKnnGPbW4GK_ygrQqsyeA0_dNXVORonkdQrlC11S7nMWgBb8BNYKAaODTTN2Frnkauoi9SfAAAAAA2GAb2AA")
 STRING_SESSION2 = getenv("STRING_SESSION2", "")
 STRING_SESSION3 = getenv("STRING_SESSION3", "")
 STRING_SESSION4 = getenv("STRING_SESSION4", "")

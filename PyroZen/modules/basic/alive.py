@@ -43,12 +43,6 @@ async def alive(client: Client, message: Message):
     xx = await edit_or_reply(message, "🤖")
     await asyncio.sleep(2)
     send = client.send_video if alive_logo.endswith(".mp4") else client.send_photo
-    try:
-        new_message = await send(
-            message.chat.id,
-            alive_logo,
-            caption=man,
-            reply_to_message_id=ReplyCheck(message),
     uptime = await get_readable_time((time.time() - StartTime))
     man = (
         f"『 ZOIDs-Userbot 』\n\n"
@@ -61,7 +55,6 @@ async def alive(client: Client, message: Message):
         f"┠➣ <b>Pyrogram Version :</b> <code>{versipyro}</code> \n"
         f"┠➣ <b>Bot Uptime :</b> <code>{uptime}</code>\n"
         f"┗━━━━━━━━━━━━━━━━━━━━━┛\n\n"
-        f"    『 [𝗦𝘂𝗽𝗽𝗼𝗿𝘁](https://t.me/{GROUP}) | [𝗖𝗵𝗮𝗻𝗻𝗲𝗹](https://t.me/{CHANNEL}) | [𝗢𝘄𝗻𝗲𝗿](tg://user?id={client.me.id}) 』"
     )
     try:
         new_message = await send(

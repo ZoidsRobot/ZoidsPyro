@@ -1,4 +1,4 @@
-# Credits: @mrismanaziz
+I# Credits: @mrismanaziz
 # Copyright (C) 2022 Pyro-ManUserbot
 #
 # This file is a part of < https://github.com/mrismanaziz/PyroMan-Userbot/ >
@@ -38,7 +38,6 @@ alive_logo = (
 emoji = gvarstatus("ALIVE_EMOJI") or "✮"
 alive_text = gvarstatus("ALIVE_TEKS_CUSTOM") or "✪ 𝙸'𝙼 𝙰𝙻𝙸𝚅𝙴 𝚃𝙾𝙳 ✪"
 
-
 @Client.on_message(filters.command(["ZOIDs", "alive"], cmd) & filters.me)
 async def alive(client: Client, message: Message):
     xx = await edit_or_reply(message, "🤖")
@@ -46,7 +45,7 @@ async def alive(client: Client, message: Message):
     send = client.send_video if alive_logo.endswith(".mp4") else client.send_photo
     uptime = await get_readable_time((time.time() - StartTime))
     man = (
-        f"**『 [ZOIDs-Userbot](https://github.com/xnxx) 』**\n\n"
+        f"『 ZOIDs-Userbot 』\n\n"
         f"<b>{alive_text}</b>\n\n"
         f"┏━━━━━━━━━━━━━━━━━━━━━┓\n"
         f"┠➣ <b>Master :</b> {client.me.mention} \n"
@@ -56,10 +55,9 @@ async def alive(client: Client, message: Message):
         f"┠➣ <b>Pyrogram Version :</b> <code>{versipyro}</code> \n"
         f"┠➣ <b>Bot Uptime :</b> <code>{uptime}</code>\n"
         f"┗━━━━━━━━━━━━━━━━━━━━━┛\n\n"
-        f"    **『 [𝗦𝘂𝗽𝗽𝗼𝗿𝘁](https://t.me/{GROUP})** | **[𝗖𝗵𝗮𝗻𝗻𝗲𝗹](https://t.me/{CHANNEL})** | **[𝗢𝘄𝗻𝗲𝗿](tg://user?id={client.me.id}) 』**"
+        f"    『 [𝗦𝘂𝗽𝗽𝗼𝗿𝘁](https://t.me/{GROUP}) | [𝗖𝗵𝗮𝗻𝗻𝗲𝗹](https://t.me/{CHANNEL}) | [𝗢𝘄𝗻𝗲𝗿](tg://user?id={client.me.id}) 』"
     )
-
-try:
+    try:
         new_message = await send(
             message.chat.id,
             caption=man,
@@ -74,18 +72,7 @@ try:
         pass
         return 
     await xx.edit_text(man, disable_web_page_preview=True)
-
-
-
-
-
-
-
-
-
-
-
-
+        
 @Client.on_message(filters.command("setalivelogo", cmd) & filters.me)
 async def setalivelogo(client: Client, message: Message):
     try:

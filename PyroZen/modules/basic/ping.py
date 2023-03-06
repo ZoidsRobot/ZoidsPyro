@@ -97,7 +97,7 @@ async def kping(client: Client, message: Message):
     await xx.edit("⚡⚡")
     await xx.edit("⚡⚡⚡")
     await xx.edit("⚡⚡⚡⚡✨")
-    await xx.edit("Awas awas awas babunya Bion mau lewat😎")
+    await xx.edit("Ciye Jadi Babi Tele ")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await xx.edit_text(

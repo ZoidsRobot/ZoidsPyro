@@ -68,7 +68,8 @@ async def alive(client: Client, message: Message):
             await asyncio.sleep(20),
             await client.delete_messages(chat_id=message.chat.id, message_ids=new_message.id),
         )
-    except BaseException:
+    except BaseException as e:
+         print(f"Error Requests: {e}")
         pass
         return 
     await xx.edit_text(man, disable_web_page_preview=True)

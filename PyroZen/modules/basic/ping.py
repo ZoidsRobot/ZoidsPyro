@@ -100,7 +100,7 @@ async def kping(client: Client, message: Message):
     await xx.edit("Awas awas awas babunya Bion mau lewat😎")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await xx.edit(
+    await xx.edit_text(
         f"❏ **PONG!!🏓**\n"
         f"├• **Pinger** - `%sms`\n"
         f"├• **Uptime -** `{uptime}` \n"

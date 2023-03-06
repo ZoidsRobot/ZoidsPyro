@@ -69,7 +69,7 @@ async def alive(client: Client, message: Message):
             await client.delete_messages(chat_id=message.chat.id, message_ids=new_message.id),
         )
     except Exception:
-    await xx.edit_text(man, disable_web_page_preview=True)
+        await xx.edit_text(man, disable_web_page_preview=True)
         
 @Client.on_message(filters.command("setalivelogo", cmd) & filters.me)
 async def setalivelogo(client: Client, message: Message):

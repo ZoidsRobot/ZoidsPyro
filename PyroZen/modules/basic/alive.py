@@ -43,6 +43,12 @@ async def alive(client: Client, message: Message):
     xx = await edit_or_reply(message, "🤖")
     await asyncio.sleep(2)
     send = client.send_video if alive_logo.endswith(".mp4") else client.send_photo
+    try:
+        new_message = await send(
+            message.chat.id,
+            alive_logo,
+            caption=man,
+            reply_to_message_id=ReplyCheck(message),
     uptime = await get_readable_time((time.time() - StartTime))
     man = (
         f"『 ZOIDs-Userbot 』\n\n"

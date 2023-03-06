@@ -1,4 +1,4 @@
-I# Credits: @mrismanaziz
+# Credits: @mrismanaziz
 # Copyright (C) 2022 Pyro-ManUserbot
 #
 # This file is a part of < https://github.com/mrismanaziz/PyroMan-Userbot/ >

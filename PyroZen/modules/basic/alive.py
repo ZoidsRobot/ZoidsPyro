@@ -69,8 +69,6 @@ async def alive(client: Client, message: Message):
             await client.delete_messages(chat_id=message.chat.id, message_ids=new_message.id),
         )
     except BaseException as e:
-        print(f"Error Requests: {e}")
-        return 
     await xx.edit_text(man, disable_web_page_preview=True)
         
 @Client.on_message(filters.command("setalivelogo", cmd) & filters.me)

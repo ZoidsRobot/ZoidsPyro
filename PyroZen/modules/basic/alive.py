@@ -58,17 +58,31 @@ async def alive(client: Client, message: Message):
         f"┗━━━━━━━━━━━━━━━━━━━━━┛\n\n"
         f"    **『 [𝗦𝘂𝗽𝗽𝗼𝗿𝘁](https://t.me/{GROUP})** | **[𝗖𝗵𝗮𝗻𝗻𝗲𝗹](https://t.me/{CHANNEL})** | **[𝗢𝘄𝗻𝗲𝗿](tg://user?id={client.me.id}) 』**"
     )
-    try:
+try:
+        new_message = await send(
+            message.chat.id,
+            caption=man,
+            reply_to_message_id=ReplyCheck(message),
+        )
         await asyncio.gather(
-             xx.delete(),
-             send(
-                message.chat.id,
-                caption=man,
-                reply_to_message_id=ReplyCheck(message),
-            ),
+            await xx.delete(),
+            await asyncio.sleep(20),
+            await client.delete_messages(chat_id=message.chat.id, message_ids=new_message.id),
         )
     except BaseException:
-        await xx.edit(man, disable_web_page_preview=True)
+        pass
+        return 
+    await xx.edit_text(man, disable_web_page_preview=True)
+
+
+
+
+
+
+
+
+
+
 
 
 @Client.on_message(filters.command("setalivelogo", cmd) & filters.me)
